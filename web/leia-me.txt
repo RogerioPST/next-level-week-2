@@ -1,0 +1,43 @@
+1.comandos:
+'npx create-react-app web --template typescript'
+'npm i react-router-dom' //p fazer navegação
+//add tipagens de react-router-dom em des apenas
+'npm i @types/react-router-dom -D'
+2. usar emmet em javascript:
+-no arquivo settings.json:
+"
+"emmet.syntaxProfiles": { "javascript" : "jsx" },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+		"
+
+3. lembrar do exact, se n, o react mostra todos os componentes
+q batem c a parte daquela rota buscada.
+
+4. usar autoimport com mais facilidade em typescript/javascript:
+-no arquivo settings.json:
+"
+	"javascript.suggest.autoImports": true,
+	"typescript.suggest.autoImports": true,
+"
+5. p informar a um componente quais propriedades ele 
+pode receber, fazer como abaixo:
+"
+interface PageHeaderProps {
+	title: string
+}
+const PageHeader: React.FC<PageHeaderProps> = () => {
+"
+
+6. #search-teachers .input-block input:focus{
+	background-color: teal;
+}
+#search-teachers .input-block input:hover{
+	/* background-color: purple; */
+}
+//estiliza todo o input-block qdo o elemento de dentro dele
+//estah com focus
+#search-teachers .input-block:focus-within{
+	background-color: gray;
+}

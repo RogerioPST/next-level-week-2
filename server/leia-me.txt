@@ -1,0 +1,39 @@
+1.comandos:
+'npm init -y'
+'npm i typescript -D'
+'npx tsc --init' //cria arquivo tsconfig.json
+//executa o arquivo typescript e verif alteracoes p restartar
+'npm i ts-node-dev -D' 
+'npm i express'
+//instala tipagens do typescript, pois a lib n foi feita c typescript
+'npm i @types/express -D' 
+'npm i knex sqlite3'
+'npm i cors'
+'npm i @types/cors -D'
+
+
+2. alterar no arquivo tsconfig.json:
+'"target": "es2017",'
+
+3. colocar script p startar o 'ts node dev' com opções, respecti-
+vamente de apenas transpilar, ignorar tranformacao da node_modules
+e restartar o server qdo tiver alterações:
+'
+"start": 
+"tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+'
+
+4. criar arquivo connection.ts, knexfile.ts, 00_create_users.ts
+e colocar o script p teste da criação de migrations no
+package.json:
+'
+"knex:migrate": "knex --knexfile knexfile.ts migrate:latest"
+"knex:migrate:rollback": "knex --knexfile knexfile.ts migrate:rollback"
+'
+e executa com 'npm run knex:migrate e 'npm run knex:migrate:rollback'
+ou
+'npx knex --knexfile knexfile.ts migrate:latest'
+
+5. instalar a extensão 'sqlite do alexcvzz.vscode-sqlite' e com
+ela , eh soh clicar c botao direito no arquivo .sqlite e clicar
+em 'open database' q vai abrir a 'sqlite explorer'
