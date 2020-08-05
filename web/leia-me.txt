@@ -3,6 +3,8 @@
 'npm i react-router-dom' //p fazer navegação
 //add tipagens de react-router-dom em des apenas
 'npm i @types/react-router-dom -D'
+'npm i axios'
+
 2. usar emmet em javascript:
 -no arquivo settings.json:
 "
@@ -40,4 +42,14 @@ const PageHeader: React.FC<PageHeaderProps> = () => {
 //estah com focus
 #search-teachers .input-block:focus-within{
 	background-color: gray;
+}
+
+7.//o extends permite obter as propriedades do HtmlElement
+interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement>{
+	name: string;
+	label: string;
+	options: Array<{
+		value: string;
+		label: string
+	}>;
 }
