@@ -1,0 +1,25 @@
+1.comandos:
+'expo init mobile'
+//p usar as google fonts:
+'expo install expo-font @expo-google-fonts/archivo @expo-google-fonts/poppins'
+'npm i @react-navigation/native'
+'npm i react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view'
+//navegacao em pilha
+'npm i @react-navigation/stack'
+//navegacao em abas
+'npm i @react-navigation/bottom-tabs'
+
+2. por padrao, o react native, n entende arquivos 
+.png, .gif, .jpg. Por isso, 
+precisa criar um arquivo em 'src/@types/index.d.ts' com:
+"
+declare module '*.png'
+declare module '*.gif'
+"
+
+3. exibindo loading enquanto n carrega as fonts:
+"
+import {AppLoading} from 'expo'
+import {Archivo_400Regular, Archivo_700Bold, useFonts} from '@expo-google-fonts/archivo'
+import {Poppins_400Regular, Poppins_600SemiBold} from '@expo-google-fonts/poppins'
+"
