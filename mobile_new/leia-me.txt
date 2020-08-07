@@ -8,6 +8,8 @@
 'npm i @react-navigation/stack'
 //navegacao em abas
 'npm i @react-navigation/bottom-tabs'
+'npm i axios'
+'expo install @react-native-community/async-storage'
 
 2. por padrao, o react native, n entende arquivos 
 .png, .gif, .jpg. Por isso, 
@@ -23,3 +25,15 @@ import {AppLoading} from 'expo'
 import {Archivo_400Regular, Archivo_700Bold, useFonts} from '@expo-google-fonts/archivo'
 import {Poppins_400Regular, Poppins_600SemiBold} from '@expo-google-fonts/poppins'
 "
+
+4. passando um componente como prop: headerRight?: ReactNode
+'
+interface PageHeaderProps{
+	title: string;
+	headerRight?: ReactNode;
+}
+'
+5. 	//será executado toda vez q a tela entrar em foco
+	useFocusEffect(() =>{
+		loadFavorites()
+	})
